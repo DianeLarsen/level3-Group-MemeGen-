@@ -17,8 +17,8 @@ Tasks
                     <img src={props.randomImage} className="meme--image" alt="meme" />
                     <h2 className="meme--text top">{props.topText}</h2>
                     <h2 className="meme--text bottom">{props.bottomText}</h2>
-                    <button className="editBtn" onClick={props.handleEdit}> edit </button>
-                    <button className="deleteBtn" onClick={props.handleDelete}> delete </button>
+                    <button className="editBtn" onClick={props.onEdit}> edit </button>
+                    <button className="deleteBtn" onClick={props.onDelete}> delete </button>
                 </div>
             )
          }   

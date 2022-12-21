@@ -1,13 +1,13 @@
 import React from "react"
-import Header from "./components/Header"
-import Meme from "./components/Meme"
+import Navbar from "./components/Navbar"
+import Form from "./components/Form"
 import "./App.css"
 
 export default function App() {
     return (
-        <div>
-            <Header />
-            <Meme />
+        <div className="screen">
+            <Navbar />
+            <Form />
         </div>
     )
 }

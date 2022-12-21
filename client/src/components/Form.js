@@ -1,5 +1,9 @@
 import React from "react"
 
+import Sidebar from "./Sidebar"
+import './list.css'
+import './form.css'
+
 export default function Meme() {
     const [meme, setMeme] = React.useState({
         topText: "",
@@ -13,7 +17,7 @@ export default function Meme() {
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
     }, [])
-    
+    //called randomMeme on Mike's
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
@@ -23,7 +27,14 @@ export default function Meme() {
         }))
         
     }
-    
+    //created function to clear once certain buttons clicked
+    function clearInput(){
+        setMeme(prevMeme => ({
+            ...prevMeme, topText: "",
+        bottomText: ""
+        }))
+    }
+    //same 
     function handleChange(event) {
         const {name, value} = event.target
         setMeme(prevMeme => ({
@@ -34,7 +45,10 @@ export default function Meme() {
     
     return (
         <main>
-            <div className="form">
+            
+            <Sidebar />
+            <br />
+            {/* <div className="form">
                 <input 
                     type="text"
                     placeholder="Top text"
@@ -56,13 +70,36 @@ export default function Meme() {
                     onClick={getMemeImage}
                 >
                     Get a new meme image 🖼
-                </button>
+                </button> */}
+                <div className="meme-container">
+       
+                <form onSubmit={getMemeImage} name="myform" className="container">
+                    <div className="field-container">
+                        <input
+                            name="topText"
+                            type="text"
+                            value={meme.topText}
+                            onChange={handleChange}
+                        />
+                        <input
+                            name="bottomText"
+                            type="text"
+                            value={meme.bottomText}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button id="meme-button" className="submit">Get a new meme image 🖼</button>
+                    <div className="meme">
+                        <img className="meme-image" src={meme.memeImg} />
+                        <h2 className="meme--text top">{meme.topText}</h2>
+                        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                    </div>
+                </form>
+            {/* </div> */}
+
+
             </div>
-            <div className="meme">
-                <img src={meme.randomImage} className="meme--image" alt="meme" />
-                <h2 className="meme--text top">{meme.topText}</h2>
-                <h2 className="meme--text bottom">{meme.bottomText}</h2>
-            </div>
+          
         </main>
     )
 }
