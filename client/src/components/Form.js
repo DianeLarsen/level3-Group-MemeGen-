@@ -44,8 +44,8 @@ export default function Meme() {
     };
 
     setSaved((prev) => [...prev, tempMeme]);
-
-    console.log(saved);
+ 
+    
   }
   //moved following to Sidebar.js
   // const [editIndex, setEditIndex] = React.useState(0);
@@ -100,7 +100,7 @@ export default function Meme() {
 
   return (
     <div className="screen">
-      <Sidebar
+      {saved[1] && <Sidebar
         topText={meme.topText}
         bottomText={meme.bottomText}
         memeImage={meme.memeImg}
@@ -110,33 +110,11 @@ export default function Meme() {
         setSaved={setSaved}
         saveChanges={saveChanges}
         setSaveChanges={setSaveChanges}
-      />
+     
+      />}
 
       <br />
-      {/*  following was mine but liked layout of Mike's better
-            <div className="form">
-                <input 
-                    type="text"
-                    placeholder="Top text"
-                    className="form--input"
-                    name="topText"
-                    value={meme.topText}
-                    onChange={handleChange}
-                />
-                <input 
-                    type="text"
-                    placeholder="Bottom text"
-                    className="form--input"
-                    name="bottomText"
-                    value={meme.bottomText}
-                    onChange={handleChange}
-                />
-                <button 
-                    className="form--button"
-                    onClick={getMemeImage}
-                >
-                    Get a new meme image 🖼
-                </button> */}
+      
 
       <div className="meme-container">
         <Navbar />
@@ -178,7 +156,7 @@ export default function Meme() {
             <h2 className="meme--text bottom">{meme.bottomText}</h2>
           </div>
         </form>
-        {/* </div> */}
+   
       </div>
     </div>
   );

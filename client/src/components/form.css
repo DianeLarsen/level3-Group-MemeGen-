@@ -1,192 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
 
+.cntBtns {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  
+}
 .submit {
-    width: 45%;
-    height: 40px;
-    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
-    font-family: 'Karla', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18.7px;
-    color: #FFF;
-    border: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
+  width: 45%;
+  height: auto;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.7px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .submit:hover {
-    background: linear-gradient(90deg, #A626D3 1.18%, #672280 100%);
-    cursor: pointer;
+  background: linear-gradient(90deg, #a626d3 1.18%, #672280 100%);
+  cursor: pointer;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 477px;
-    margin-top: 36px;
-    align-items: center;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 36px;
+  align-items: center;
+  height: auto;
 }
 
 .field-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
 
-input[type=text] {
-    width: 225px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid #D5D4D8;
-    font-family: 'Karla', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14.03px;
-    margin-right: 5px;
-    margin-left: 5px;
+input[type="text"] {
+  width: 45%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.03px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .meme-image {
-    width: 477px;
-    height: auto;
-    margin: 36px 20px 55px 0;
+  width: 97%;
+  height: auto;
+  justify-self: center;
+  margin-top: 36px;
+  margin-bottom: 55px;
 }
 
 .meme {
-    position: relative;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .meme--text {
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
-    font-family: impact, sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1px;
-    text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
 }
 
 .bottom {
-    bottom: 50px;
+  bottom: 50px;
 }
 
 .top {
-    top: 30px;
+  top: 30px;
 }
 
 .sidebar {
-    position: fixed;
-    background-color: #A626D375;
-    width: 350px; height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 3px;
-    left: 0; top: 0;
-    overflow: scroll;
+  /* position: fixed; */
+  background-color: #a626d375;
+  width: 44%;
+  max-width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 3px;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  border-radius: 5px;
 }
 
 .screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%; 
+  gap: 10px;
+  
 }
-
+@media only screen and (max-width: 600){
+    .screen{
+        flex-direction: column;
+    }
+}
 .meme-container {
-    width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFF;
-    border-radius: 25px;
-    position: absolute;
-    left: 50%;
-    top: 1%;
-    transform: translate(-50%);
-    box-shadow: 0px 10px 42px 16px rgba(0,0,0,0.1);
+  width: 55%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  /* position: absolute; */
+  /* left: 50%; */
+  top: 1%;
+  /* transform: translate(-50%); */
+  box-shadow: 0px 10px 42px 16px rgba(0, 0, 0, 0.1);
 }
 
 .saveButton {
-    
-    /* top: 5%;
-    left: 267px; */
-    transform: translate(100%);
-    background-color: rgb(77, 240, 94);
-    border: 1px solid black;
-    border-radius: 5px;
-    /* padding: 10px 20px; */
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    cursor: pointer;
+  /* transform: translate(100%); */
+  background-color: rgb(77, 240, 94);
+  border: 1px solid black;
+  border-radius: 5px;
 
-    width: 45%;
-    height: 40px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
 
-    font-family: 'Karla', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 18.7px;
-    color: #FFF;
-    margin-right: 5px;
-    margin-left: 5px;
-  
-    margin-top: 15px;
+  width: 45%;
+  height: 40px;
+
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.7px;
+  color: #fff;
+  margin-right: 5px;
+  margin-left: 5px;
+
+  margin-top: 15px;
 }
 
 .saveButton:hover {
-    background-color: rgb(146, 247, 156);
+  background-color: rgb(146, 247, 156);
 }
-
+.modBtns {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 .editButton {
-    position: absolute;
-    top: 10%;
-    left: 15%;
-    transform: translate(100%);
-    background-color: rgb(47, 119, 236);
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    cursor: pointer;
+  width: 40%;
+  margin-right: 10px;
+
+  background-color: rgb(47, 119, 236);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
 }
 
 .editButton:hover {
-    background-color: rgb(123, 164, 230);
+  background-color: rgb(123, 164, 230);
 }
 
 .cancelButton {
-    position: absolute;
-    top: 15%;
-    left: 294px;
-    transform: translate(100%);
-    background-color: rgb(236, 53, 47);
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    cursor: pointer;
+  width: 40%;
+  background-color: rgb(236, 53, 47);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
 }
 
 .cancelButton:hover {
-    background-color: rgb(239, 158, 158);
-}
-.cntBtns{
-    display: inline-flex;
-    width: 100%;
+  background-color: rgb(239, 158, 158);
 }
