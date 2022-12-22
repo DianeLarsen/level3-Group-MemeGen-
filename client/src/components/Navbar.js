@@ -8,6 +8,7 @@ export default function Header() {
             <img 
                 src={troll} 
                 alt="troll"
+                className="nav--img"
             />
             <h1 >Meme Generator</h1>
             <p >React Course - Project 3</p>

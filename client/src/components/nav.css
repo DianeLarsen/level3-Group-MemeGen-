@@ -11,7 +11,7 @@ nav {
     border-radius: 25px 25px 0 0;
 }
 
-img {
+img.nav--img {
     width: 31.31px;
     height: 26.22px;
     padding-left: 20px;
